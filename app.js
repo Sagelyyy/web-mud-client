@@ -1,4 +1,5 @@
 const net = require('net');
+const fs = require('fs')
 const {TelnetSocket} = require("telnet-stream");
 let socket, tSocket;
 
@@ -19,9 +20,12 @@ tSocket.on("close", function() {
   return process.exit();
 });
 
-// if we get any data, display it to stdout
+// if we get any data, write it to the output file
 tSocket.on("data", function(buffer) {
-  return process.stdout.write(buffer.toString("utf8"));
+  fs.writeFile("output.txt", buffer.toString("utf8"), (err) => {
+    if (err) throw err
+  })
+  // return process.stdout.write(buffer.toString("utf8"));
 });
 
 // if the user types anything, send it to the socket

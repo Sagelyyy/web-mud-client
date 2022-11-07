@@ -8,5 +8,10 @@
 </head>
 <body>
     <p>TEST!</p>
+    <% if(output) { %>
+        <p><%- output %> </p>
+        <% }else{ %>
+             <p>Nothing to display </p> 
+            <% } %>     
 </body>
 </html>
