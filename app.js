@@ -3,7 +3,6 @@ const fs = require('fs')
 const {TelnetSocket} = require("telnet-stream");
 let socket, tSocket;
 
-
   const params = {
     host: 'moo.sindome.org',
     port: 5555,
@@ -21,6 +20,10 @@ tSocket.on("close", function() {
 });
 
 // if we get any data, write it to the output file
+
+// How do we deal with multiple users here? We can't be
+// writing it all to the same output. The output file
+// must be unique to each user...
 tSocket.on("data", function(buffer) {
   fs.writeFile("output.txt", buffer.toString("utf8"), (err) => {
     if (err) throw err

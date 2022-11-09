@@ -1,2 +1,2 @@
-**[You have exceeded maximum idle time.]**
-*** Disconnected ***
+  [Start '[38;5;11mhttp://www.sindome.org/signup/[0m' to signup for a character    ]
+  [Type  '[38;5;10mtour[0m' to check out the world                                 ]

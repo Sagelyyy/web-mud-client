@@ -1,0 +1,5 @@
+.mud{
+    max-width: 90vw;
+    height: 90vh;
+    overflow-y: scroll;
+}
