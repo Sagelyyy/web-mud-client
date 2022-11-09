@@ -1,5 +1,6 @@
 const express = require('express')
 const fs = require('fs')
+Tail = require('tail').Tail
 
 const app = express()
 
